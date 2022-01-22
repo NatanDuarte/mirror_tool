@@ -61,6 +61,15 @@ class Mirror:
         return cv.warpAffine(self._copy, rotation_matrix, dimensions)
 
     def save(self, output_name, result):
+        '''# save
+
+        saves a given image to the output directory, creating
+        this directory if it doesn't exists.
+
+        ## Args
+
+        * output_name: name of the output file.
+        * result: the image who will be written.'''
         out_dir = 'output'
         if not os.path.exists(out_dir): os.mkdir(out_dir)
         cv.imwrite(os.path.join(out_dir, output_name), result)
