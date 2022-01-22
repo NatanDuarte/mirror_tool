@@ -36,6 +36,7 @@ class Mirror:
         dimensions = (width, height)
         return cv.warpAffine(self._copy, rotation_matrix, dimensions)
 
-    def save(self, output_path, result):
-        cv.imwrite(output_path, result)
-        print(f'file saved at: {os.path.abspath(output_path)}')
+    def save(self, output_name, result):
+        out_dir = 'output'
+        cv.imwrite(os.path.join(out_dir, output_name), result)
+        print(f'file saved at: {os.path.join(os.getcwd(), out_dir, output_name)}')
