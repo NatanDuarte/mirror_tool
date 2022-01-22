@@ -8,6 +8,15 @@ class Mirror:
         self._copy = self._image.copy()
 
     def process(self, is_reverse:bool):
+        '''# process: 
+        creates a mirrored image by creating a copy of the original, them rotating
+        by 180 degrees and flipping it. It finalizes returning the concatenation of
+        both images
+
+        # Args:
+
+        is_reverse: the default order is mirrored image and then the original one.
+        set this variable to True if you want to invert the sequence.'''
         rotated = self.rotate(angle=180)
         mirrored = cv.flip(rotated, 1)
 
