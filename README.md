@@ -11,3 +11,7 @@ A command line tool for mirroring images
 -p | bool | show preview
 
 -r | bool | reverse image orientation
+
+### Example
+
+![mirrored image example](https://imgur.com/gallery/HC5CAcu)
