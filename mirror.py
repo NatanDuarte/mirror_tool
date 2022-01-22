@@ -6,7 +6,6 @@ class Mirror:
     def __init__(self, image_path:str) -> None:
         self._image = cv.imread(image_path)
         self._copy = self._image.copy()
-        if not os.path.exists('output'): os.mkdir('output')
 
     def process(self, is_reverse:bool):
         rotated = self.rotate(angle=180)
@@ -38,5 +37,6 @@ class Mirror:
 
     def save(self, output_name, result):
         out_dir = 'output'
+        if not os.path.exists(out_dir): os.mkdir(out_dir)
         cv.imwrite(os.path.join(out_dir, output_name), result)
         print(f'file saved at: {os.path.join(os.getcwd(), out_dir, output_name)}')
