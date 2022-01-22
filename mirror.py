@@ -26,12 +26,19 @@ class Mirror:
         result_image = np.concatenate(concatenate_order)
         return result_image
 
-    def preview(self, image):
-        image_view = image.copy()
-        preview_aspect = (350, 350)
-        image_view = cv.resize(image_view, preview_aspect,
+    def preview(self, image, preview_aspect=(250, 250)):
+        '''# preview:
+
+        Displays a preview window of a given image.
+
+        ## Args
+
+        * image: the image to preview
+        * preview_aspect: preview aspect ration'''
+        preview = image.copy()
+        preview = cv.resize(preview, preview_aspect,
                                 interpolation=cv.INTER_LINEAR)
-        cv.imshow('preview', image_view)
+        cv.imshow('preview', preview)
         cv.waitKey(0)
 
     def rotate(self, angle, rotPoint=None):
