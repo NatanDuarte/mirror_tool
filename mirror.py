@@ -41,7 +41,16 @@ class Mirror:
         cv.imshow('preview', preview)
         cv.waitKey(0)
 
-    def rotate(self, angle, rotPoint=None):
+    def rotate(self, angle:int, rotPoint=None):
+        '''# rotate
+
+        rotate a image in a given angle through a given point
+
+        ## Args
+
+        * angle: angle to rotate the image.
+
+        * rotPoint: point rotate the image.'''
         (height, width) = self._copy.shape[:2]
 
         if rotPoint is None:
