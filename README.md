@@ -14,4 +14,4 @@ A command line tool for mirroring images
 
 ### Example
 
-![mirrored image example](https://imgur.com/gallery/HC5CAcu)
+![mirrored image example](https://imgur.com/YuOFeQL)
