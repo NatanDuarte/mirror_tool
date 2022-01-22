@@ -1,6 +1,6 @@
 # Mirror image tool
 
-
+A command line tool for mirroring images
 
 ## Commands
 
